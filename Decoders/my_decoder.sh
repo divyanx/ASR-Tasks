@@ -53,4 +53,8 @@ steps/lmrescore_const_arpa.sh --cmd "$decode_cmd" data/lang_test_{tgsmall,tglarg
     data/convert_me_hires $dir/decode_convert_me_{tgsmall,tglarge}
 
 steps/get_ctm.sh data/convert_me exp/chain_cleaned/tdnn_1d_sp/graph_tgsmall \
-    exp/chain_cleaned/tdnn_1d_sp/decode_convert_me_tglarge
+    exp/chain_cleaned/tdnn_1d_sp/decode_convert_me_tgsmall
+
+echo "transcript is in exp/chain_cleaned/tdnn_1d_sp/decode_convert_me_tglarge/score_20/convert_me.ctm"
+
+python3 transcript_generator.py
